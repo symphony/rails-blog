@@ -1,4 +1,5 @@
 <% @article.comments.each do |comment| %>
+  <% next if comment.archived? %>
   <p>
     <strong><%= comment.commenter %> says:</strong>
   </p>
